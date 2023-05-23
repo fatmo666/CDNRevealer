@@ -1,0 +1,19 @@
+proxy:
+  enable: false
+  http: http://your_proxy_ip:your_proxy_port
+  https: https://your_proxy_ip:your_proxy_port
+
+api_credentials:
+  censys:
+    api_id: your_censys_api_id
+    api_secret: your_api_secret
+  shodan:
+    api_key: your_shodan_api_key
+  security_trails:
+    api_key: your_security_trails_api_key
+  bing:
+    api_key: your_bing_api_key
+  dnsdb:
+    api_key: your_dnsdb_api_key
+  urlscan:
+    api_key: your_urlscan_api_key
