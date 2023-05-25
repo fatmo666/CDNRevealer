@@ -26,8 +26,8 @@ async def plugin_cert_transparency(domain: str, proxy_config: Dict[str, str], co
             if ip and is_ipv4_address(ip):
                 ips.append(ip)
 
-        return {"status": "success", "ip_addresses": ips}
+        return {"status": "success", "is_bypass": "true", "ip_addresses": ips}
     except Exception as e:
         # 日志记录：Certificate Transparency插件出错
         log.error(f"Certificate Transparency error: {e}")
-        return {"status": "error", "message": str(e)}
+        return {"status": "error", "is_bypass": "true", "message": str(e)}

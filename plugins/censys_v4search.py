@@ -20,7 +20,7 @@ async def plugin_censys_v4search(domain: str, proxy_config: Dict[str, str], api_
     # 如果没有找到 API 凭据，记录错误并返回
     if not censys_api_id or not censys_api_secret:
         log.error("Censys API ID or Secret not found in config file.")
-        return {"status": "error", "message": "Censys API credentials not found."}
+        return {"status": "error", "is_bypass": "true", "message": "Censys API credentials not found."}
 
     # 实例化 CensysIPv4 对象
     censys_ipv4 = CensysHosts(api_id=censys_api_id, api_secret=censys_api_secret)
@@ -30,9 +30,9 @@ async def plugin_censys_v4search(domain: str, proxy_config: Dict[str, str], api_
         search_results = censys_ipv4.search(f"{domain}")
     except Exception as e:
         log.error(f"Error in Censys search: {e}")
-        return {"status": "error", "message": f"Error in Censys search: {e}"}
+        return {"status": "error", "is_bypass": "true", "message": f"Error in Censys search: {e}"}
 
     # 提取 IPv4 地址
     ip_addresses = [result_key["ip"] for result_name, result_key in search_results.view_all()]
 
-    return {"status": "success", "ip_addresses": ip_addresses}
+    return {"status": "success", "is_bypass": "true", "ip_addresses": ip_addresses}

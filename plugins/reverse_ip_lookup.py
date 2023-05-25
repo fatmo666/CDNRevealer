@@ -20,10 +20,10 @@ async def plugin_reverse_ip_lookup(domain: str, proxy_config: Dict[str, str],
         data = response.json()
         ips = [entry["ip"] for entry in data["results"]]
 
-        return {"status": "success", "ip_addresses": ips}
+        return {"status": "success", "is_bypass": "true", "ip_addresses": ips}
     except Exception as e:
         log.error(f"Reverse IP Lookup error: {e}")
-        return {"status": "error", "message": str(e)}
+        return {"status": "error", "is_bypass": "true", "message": str(e)}
 
 
 def get_proxies(proxy_config):

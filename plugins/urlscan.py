@@ -22,10 +22,10 @@ async def plugin_urlscan(domain: str, proxy_config: Dict[str, str], api_credenti
             if ip:
                 ips.append(ip)
 
-        return {"status": "success", "ip_addresses": ips}
+        return {"status": "success", "is_bypass": "true", "ip_addresses": ips}
     except Exception as e:
         log.error(f"Urlscan.io query error: {e}")
-        return {"status": "error", "message": str(e)}
+        return {"status": "error", "is_bypass": "true", "message": str(e)}
 
 def get_proxies(proxy_config):
     if proxy_config["enable"]:

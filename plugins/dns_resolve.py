@@ -39,4 +39,4 @@ async def plugin_dns_resolve(domain: str, proxy_config: Dict[str, str], api_cred
     ip_addresses = list(set(ip_addresses))  # 去除重复的IP地址
     log.info(f"Plugin 'dns_resolve' get the ip address：{ip_addresses}")
 
-    return {"status": "success" if ip_addresses else "failed", "ip_addresses": ip_addresses}
+    return {"status": "success" if ip_addresses else "failed", "is_bypass": "true", "ip_addresses": ip_addresses}

@@ -24,10 +24,10 @@ Dict[str, Union[str, List[str]]]:
             for ip in record["values"]:
                 ips.add(ip["ip"])
 
-        return {"status": "success", "ip_addresses": list(ips)}
+        return {"status": "success", "is_bypass": "true", "ip_addresses": list(ips)}
     except Exception as e:
         log.error(f"DNS History lookup error: {e}")
-        return {"status": "error", "message": str(e)}
+        return {"status": "error", "is_bypass": "true", "message": str(e)}
 
 
 def get_proxies(proxy_config):
