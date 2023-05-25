@@ -21,7 +21,6 @@ ip_api = {
     "cloudflare": [
         "https://www.cloudflare.com/ips-v4",
 		"https://www.cloudflare.com/ips-v6",
-		"https://www.cloudflare.com/ips/"
     ],
     "cloudfront": [
         "https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips",
@@ -32,17 +31,12 @@ ip_api = {
     "fastly": [
         "https://api.fastly.com/public-ip-list"
     ],
-    "imperva": [
-        "https://docs.imperva.com/en-US/bundle/z-kb-articles-km/page/c85245b7.html"
-    ],
     "maxcdn": [
         "https://support.maxcdn.com/hc/en-us/article_attachments/360051920551/maxcdn_ips.txt",
-		"https://www.maxcdn.com/one/assets/ips.txt"
     ],
     "microsoft": [
         "https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20230515.json",
         "https://download.microsoft.com/download/0/1/8/018E208D-54F8-44CD-AA26-CD7BC9524A8C/PublicIPs_20200824.xml",
-		"https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
     ],
     "oracle": [
         "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json"
@@ -53,25 +47,16 @@ ip_api = {
 	"Tencent Cloud": [
 		"https://ip.tencentcloudapi.com/"
 	],
-	"Vultr": [
-		"https://www.vultr.com/resources/faq/#downloadspeedtests"
-	],
-	"incapsula": [
-		"https://my.incapsula.com/api/integration/v1/ips"
-	],
     "unknown": [
         "https://ayrix.info/cut-cdn-data/1/",
         "https://ayrix.info/cut-cdn-data/2/"
     ],
 	"OpenSource API": [
 		"https://cdn.nuclei.sh/",
-		"https://github.com/NyDubh3/CDN-Filter/blob/main/cdn_ip_cidr.json",
-		"https://github.com/Gelob/azure-cdn-ips",
-		"https://github.com/pressdot/Gcore_Cdn_IPs"
 	]
 }
 
-cdns = ['204.246.174.0/23', '122.70.134.0/24', '52.57.254.0/24', '109.94.168.0/24', '205.251.249.0/24',
+cdn_ip = ['204.246.174.0/23', '122.70.134.0/24', '52.57.254.0/24', '109.94.168.0/24', '205.251.249.0/24',
         '143.204.0.0/16', '13.124.199.0/24', '115.127.240.0/24', '101.79.239.0/24', '61.54.46.0/24',
         '113.20.150.0/23', '119.31.251.0/24', '14.0.47.0/24', '150.138.150.0/24', '52.220.191.0/26',
         '58.20.204.0/24', '125.88.190.0/24', '112.140.128.0/20', '61.54.47.0/24', '183.232.53.0/24',
